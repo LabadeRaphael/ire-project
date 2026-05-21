@@ -1,0 +1,82 @@
+<!-- client/cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | Dreamware Store</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">LaitanLuxe</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <!-- <li><a href="cart.html">Cart</a></li> -->
+            <!-- <li><a href="account.html">Account</a></li> -->
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+    <div id="cartoutMessage" class="checkout-message"></div>
+
+    <section class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items" id="cartItems">
+            <!-- JS will insert cart items here -->
+        </div>
+
+        <div class="cart-summary">
+            <h2>Total: <span id="totalPrice">₦0.00</span></h2>
+            <button class="btn checkout-btn" id="checkoutBtn">Checkout</button>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About LaitanLuxe</h3>
+                <p>LaitanLuxe Store is your trusted source for quality products at affordable prices.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#account">Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LaitanLuxe Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

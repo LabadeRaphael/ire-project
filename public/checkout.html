@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Checkout</title>
+
+  <link
+    rel="stylesheet"
+    href="./css/variables.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/navbar.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/checkout.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header id="navbar"></header>
+
+  <!-- CHECKOUT -->
+
+  <section class="checkout-section">
+
+    <div class="checkout-container">
+
+      <!-- FORM -->
+
+      <form
+        id="checkoutForm"
+        class="checkout-form"
+      >
+
+        <h2>
+          Delivery Information
+        </h2>
+
+        <!-- NAME -->
+
+        <div class="input-group">
+
+          <input
+            type="text"
+            id="fullName"
+            placeholder=" "
+          >
+
+          <label>
+            Full Name
+          </label>
+
+          <small
+            class="error"
+            id="nameError"
+          ></small>
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="input-group">
+
+          <input
+            type="email"
+            id="email"
+            placeholder=" "
+          >
+
+          <label>
+            Email Address
+          </label>
+
+          <small
+            class="error"
+            id="emailError"
+          ></small>
+
+        </div>
+
+        <!-- PHONE -->
+
+        <div class="input-group">
+
+          <input
+            type="text"
+            id="phone"
+            placeholder=" "
+          >
+
+          <label>
+            Phone Number
+          </label>
+
+          <small
+            class="error"
+            id="phoneError"
+          ></small>
+
+        </div>
+
+        <!-- ADDRESS -->
+
+        <div class="input-group">
+
+          <textarea
+            id="address"
+            placeholder=" "
+          ></textarea>
+
+          <label>
+            Delivery Address
+          </label>
+
+          <small
+            class="error"
+            id="addressError"
+          ></small>
+
+        </div>
+
+        <!-- PAYMENT -->
+
+        <div class="payment-method">
+
+          <h3>
+            Payment Method
+          </h3>
+
+          <label>
+
+            <input
+              type="radio"
+              name="payment"
+              value="card"
+              checked
+            >
+
+            Card Payment
+
+          </label>
+
+          <label>
+
+            <input
+              type="radio"
+              name="payment"
+              value="transfer"
+            >
+
+            Bank Transfer
+
+          </label>
+
+        </div>
+
+        <button type="submit">
+
+          Place Order
+
+        </button>
+
+      </form>
+
+      <!-- SUMMARY -->
+
+      <div class="checkout-summary">
+
+        <h3>
+          Order Summary
+        </h3>
+
+        <div
+          id="summaryItems"
+        ></div>
+
+        <div class="summary-total">
+
+          <span>Total</span>
+
+          <strong id="checkoutTotal">
+
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TOAST -->
+
+  <div id="toastContainer"></div>
+
+  <script
+    type="module"
+    src="./js/checkout.js"
+  ></script>
+
+</body>
+</html>

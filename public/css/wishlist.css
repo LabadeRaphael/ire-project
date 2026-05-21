@@ -1,0 +1,25 @@
+/* WISHLIST */
+
+.wishlist-btn {
+
+  width: 45px;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: #f8fafc;
+
+  font-size: 1.1rem;
+
+  transition: var(--transition);
+}
+
+.wishlist-btn:hover {
+
+  transform: scale(1.08);
+}

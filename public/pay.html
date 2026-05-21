@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Checkout | Mega Food Store</title>
+  <link rel="stylesheet" href="pay.css" />
+</head>
+<body>
+  <div class="payment-container">
+    <h2>🍱 Checkout - Mega Food Store</h2>
+    <form id="paymentForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Email Address</label>
+      <input type="email" id="email" required />
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label>Amount (₦)</label>
+      <input type="number" id="amount" required />
+
+      <button type="submit">Pay with Paystack</button>
+    </form>
+  </div>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="pay.js"></script>
+</body>
+</html>

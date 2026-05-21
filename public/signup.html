@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamWare Signup</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/signup.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="signup-container">
+
+    <!-- LEFT SIDE -->
+    <section class="signup-left">
+
+      <div class="overlay"></div>
+
+      <div class="content">
+        <h1>DreamWare</h1>
+
+        <p>
+          Shop smarter with a premium ecommerce experience.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section class="signup-right">
+
+      <form id="signupForm" class="signup-form">
+
+        <h2>Create Account</h2>
+        <div id="messageBox"></div>
+        <!-- FULL NAME -->
+        <div class="input-group">
+          <input
+            type="text"
+            id="fullName"
+            placeholder=" "
+          >
+          <label>Full Name</label>
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="input-group">
+          <input
+            type="email"
+            id="email"
+            placeholder=" "
+          >
+          <label>Email Address</label>
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <!-- PHONE -->
+        <div class="input-group">
+          <input
+            type="text"
+            id="phone"
+            placeholder=" "
+          >
+          <label>Phone Number</label>
+          <small class="error" id="phoneError"></small>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group password-group">
+
+          <input
+            type="password"
+            id="password"
+            placeholder=" "
+          >
+
+          <label>Password</label>
+
+          <span id="togglePassword">
+            👁
+          </span>
+
+          <small class="error" id="passwordError"></small>
+
+          <div class="strength">
+            <div id="strengthBar"></div>
+          </div>
+
+        </div>
+
+        <button type="submit">
+          Create Account
+        </button>
+
+        <p class="login-link">
+          Already have an account?
+          <a href="./login.html">Login</a>
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./js/signup.js"></script>
+
+</body>
+</html>

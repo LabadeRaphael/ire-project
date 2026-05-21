@@ -1,0 +1,102 @@
+<!-- client/account.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamware | Account</title>
+    <link rel="stylesheet" href="./account.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Olaitan</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </nav>
+    
+    <section class="account-section">
+        <h1>Welcome to Your Dreamware Account</h1>
+
+        <!-- 🔐 Login/Register Section -->
+        <div id="authBox" class="account-box">
+            <h2>🔐 Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+            <button class="btn" onclick="login()">Login</button>
+
+            <h2>📝 Register</h2>
+            <input type="text" id="registerName" placeholder="Name" />
+            <input type="email" id="registerEmail" placeholder="Email" />
+            <input type="password" id="registerPassword" placeholder="Password" />
+            <button class="btn" onclick="register()">Register</button>
+        </div>
+
+        <!-- 👤 User Dashboard -->
+        <div id="dashboard" class="account-box" style="display: none;">
+            <h2>👋 Hello, <span id="userName"></span></h2>
+            <p>Email: <span id="userEmail"></span></p>
+            <button class="btn" onclick="logout()">🚪 Logout</button>
+
+            <h3>🛍 Order History</h3>
+            <ul id="orderList"></ul>
+            <p>Status: <span class="pending">Awaiting Payment</span></p>
+            <div class="bank-details">
+                <p><strong>Pay to:</strong> GTBank - 0123456789 - Dreamware Store</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Olaitan</h3>
+                <p>Olaitan Store is your trusted source for quality products at affordable prices.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#account">Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Olaitan Store. All rights reserved.</p>
+        </div>
+    </footer>
+  
+    <script src="account.js"></script>
+</body>
+
+</html>

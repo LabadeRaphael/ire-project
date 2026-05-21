@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#navbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+:root {
+
+    --primary-color: #7c3aed;
+    --primary-dark: #5b21b6;
+
+    --secondary-color: #06b6d4;
+
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    
+    --error-color: #ef4444;
+    
+    --border-color: #e2e8f0;
+
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    --radius-md: 14px;
+
+    --transition: all 0.3s ease;
+}
+
+/* NAV */
+
+.nav-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 6%;
+
+}
+
+/* LOGO */
+
+.logo a {
+
+    text-decoration: none;
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+}
+
+/* LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--text-primary);
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+
+    color: var(--primary-color);
+}
+
+/* ACTIONS */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+/* ICON BUTTON */
+
+.icon-btn {
+
+    position: relative;
+
+    border: none;
+
+    background: white;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow-md);
+
+    transition: var(--transition);
+
+    font-size: 1rem;
+}
+
+.icon-btn:hover {
+
+    transform: translateY(-2px);
+}
+
+/* BADGE */
+
+.badge {
+
+    position: absolute;
+
+    top: -5px;
+
+    right: -3px;
+
+    background: var(--error-color);
+
+    color: white;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    font-size: 0.7rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* LOGIN */
+
+.login-btn {
+
+    text-decoration: none;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: var(--radius-md);
+
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+
+    background: var(--primary-dark);
+}
+
+/* PROFILE */
+
+.profile {
+
+    position: relative;
+}
+
+.profile-btn {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    font-weight: bold;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 0;
+
+    width: 220px;
+
+    background: white;
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-md);
+
+    padding: 20px;
+
+    display: none;
+}
+
+.dropdown p {
+
+    margin-bottom: 15px;
+
+    color: var(--text-primary);
+}
+
+.dropdown button {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: var(--radius-md);
+
+    background: var(--error-color);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.show-dropdown {
+
+    display: block;
+}
+
+/* MENU BUTTON */
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .menu-btn {
+
+        display: block;
+    }
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 30px;
+
+        display: none;
+    }
+
+    .show-menu {
+
+        display: flex;
+    }
+}
