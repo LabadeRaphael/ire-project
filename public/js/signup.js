@@ -55,43 +55,55 @@ togglePassword.addEventListener(
 );
 
 /* PASSWORD STRENGTH */
+password.addEventListener("input", () => {
+  const value = password.value;
 
-password.addEventListener(
-  "input",
-  () => {
+  let strength = 0;
 
-    const value = password.value;
+  const hasLength = value.length >= 8;
+  const hasUpper = /[A-Z]/.test(value);
+  const hasNumber = /[0-9]/.test(value);
+  const hasSymbol = /[^A-Za-z0-9]/.test(value);
 
-    let strength = 0;
+  /* RULE UI */
+  document.getElementById("lenRule").textContent =
+    hasLength ? "✔ At least 8 characters" : "❌ At least 8 characters";
 
-    if (value.length >= 8) strength++;
-    if (/[A-Z]/.test(value)) strength++;
-    if (/[0-9]/.test(value)) strength++;
-    if (/[^A-Za-z0-9]/.test(value)) strength++;
+  document.getElementById("upperRule").textContent =
+    hasUpper ? "✔ One uppercase letter" : "❌ One uppercase letter";
 
-    if (strength === 1) {
-      strengthBar.style.width = "25%";
-      strengthBar.style.background = "red";
-    }
+  document.getElementById("numRule").textContent =
+    hasNumber ? "✔ One number" : "❌ One number";
 
-    if (strength === 2) {
-      strengthBar.style.width = "50%";
-      strengthBar.style.background = "orange";
-    }
+  document.getElementById("symbolRule").textContent =
+    hasSymbol ? "✔ One special character" : "❌ One special character";
 
-    if (strength === 3) {
-      strengthBar.style.width = "75%";
-      strengthBar.style.background = "yellow";
-    }
+  /* STRENGTH */
+  if (hasLength) strength++;
+  if (hasUpper) strength++;
+  if (hasNumber) strength++;
+  if (hasSymbol) strength++;
 
-    if (strength === 4) {
-      strengthBar.style.width = "100%";
-      strengthBar.style.background = "green";
-    }
-
+  if (strength === 1) {
+    strengthBar.style.width = "25%";
+    strengthBar.style.background = "red";
   }
-);
 
+  if (strength === 2) {
+    strengthBar.style.width = "50%";
+    strengthBar.style.background = "orange";
+  }
+
+  if (strength === 3) {
+    strengthBar.style.width = "75%";
+    strengthBar.style.background = "yellow";
+  }
+
+  if (strength === 4) {
+    strengthBar.style.width = "100%";
+    strengthBar.style.background = "green";
+  }
+});
 /* FORM SUBMIT */
 
 form.addEventListener(

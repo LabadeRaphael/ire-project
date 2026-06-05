@@ -241,6 +241,17 @@ button:hover {
   background: red;
 }
 
+/* PASSWORD RULES */
+.password-rules {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.password-rules p {
+  margin: 4px 0;
+}
+
 /* MOBILE */
 
 @media (max-width: 900px) {

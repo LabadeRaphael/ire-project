@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DreamWare Signup</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/signup.css">
@@ -39,33 +40,21 @@
         <div id="messageBox"></div>
         <!-- FULL NAME -->
         <div class="input-group">
-          <input
-            type="text"
-            id="fullName"
-            placeholder=" "
-          >
+          <input type="text" id="fullName" placeholder=" ">
           <label>Full Name</label>
           <small class="error" id="nameError"></small>
         </div>
 
         <!-- EMAIL -->
         <div class="input-group">
-          <input
-            type="email"
-            id="email"
-            placeholder=" "
-          >
+          <input type="email" id="email" placeholder=" ">
           <label>Email Address</label>
           <small class="error" id="emailError"></small>
         </div>
 
         <!-- PHONE -->
         <div class="input-group">
-          <input
-            type="text"
-            id="phone"
-            placeholder=" "
-          >
+          <input type="text" id="phone" placeholder=" ">
           <label>Phone Number</label>
           <small class="error" id="phoneError"></small>
         </div>
@@ -73,18 +62,21 @@
         <!-- PASSWORD -->
         <div class="input-group password-group">
 
-          <input
-            type="password"
-            id="password"
-            placeholder=" "
-          >
+          <input type="password" id="password" placeholder=" ">
 
           <label>Password</label>
 
           <span id="togglePassword">
             👁
           </span>
-
+          
+          <div class="password-rules">
+            <p id="lenRule">❌ At least 8 characters</p>
+            <p id="upperRule">❌ One uppercase letter</p>
+            <p id="numRule">❌ One number</p>
+            <p id="symbolRule">❌ One special character</p>
+          </div>
+          
           <small class="error" id="passwordError"></small>
 
           <div class="strength">
@@ -111,4 +103,5 @@
   <script type="module" src="./js/signup.js"></script>
 
 </body>
+
 </html>
