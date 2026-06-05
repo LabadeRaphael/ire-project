@@ -153,17 +153,17 @@ body {
 
 /* PRODUCTS */
 
-.products-section {
+.products-section, .shop-section{
 
   padding: 80px 6%;
 }
 
-.section-header {
+.section-header, .shop-header {
 
   margin-bottom: 40px;
 }
 
-.section-header h2 {
+.section-header h2, .shop-header h2 {
 
   font-size: 2rem;
 

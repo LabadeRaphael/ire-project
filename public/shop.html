@@ -1,140 +1,101 @@
-<!-- client/shop.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop | Dreamware Store</title>
-    <link rel="stylesheet" href="shop.css" />
+
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/toast.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">Olaitan</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li style="display: flex;">
-                <a href="cart.html">Cart</a>
-                <sup><div id="cartCounter" class="cartCounter"></div></sup>
-            </li>
-            <!-- <li><a href="account.html">Account</a></li> -->
-            <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <div class="menu-toggle" id="menuToggle">&#9776;</div>
-    </nav>
 
-    <!-- <section class="shop-header">
-        <div class="shop-overlay">
-            <h1>Our Collections</h1>
-            <p>Refined fashion made for comfort and class.</p>
+    <!-- NAVBAR -->
+    <header id="navbar"></header>
+
+    <!-- SHOP -->
+    <section class="shop-section">
+
+        <div class="shop-header">
+            <h2>Shop Products</h2>
         </div>
-    </section> -->
 
+        <div class="filter-wrapper">
 
-    <div class="slider">
-        <div class="slide active" style="background-image: url('../public/images/shopimg.jpg');">
-            <div class="overlay">
-                <h1>Welcome to Dreamware Store</h1>
-                <p>"Buy less, choose well, make it last."</p>
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Search products...">
+
             </div>
-        </div>
-        <div class="slide" style="background-image: url('../public/images/shopimg2.jpg');">
-            <div class="overlay">
-                <h1>Welcome to Dreamware Store</h1>
-                <p>"Fashion is the armor to survive the reality of everyday life."</p>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('../public/images/shopimg3.jpg');">
-            <div class="overlay">
-                <h1>Welcome to Dreamware Store</h1>
-                <p>"Style is a way to say who you are without having to speak."</p>
-            </div>
-        </div>
-    
-        <!-- Navigation -->
-        <div class="navigation">
-            <span class="prev">&#10094;</span>
-            <span class="next">&#10095;</span>
-        </div>
-    
-        <!-- Dots -->
-        <div class="dots"></div>
-    </div>
 
+            <!-- CATEGORY -->
 
-    <section class="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="clothes">Clothes</button>
-        <button class="filter-btn" data-category="pajamas">Pajamas</button>
-        <button class="filter-btn" data-category="underwear">Underwear</button>
-        <button class="filter-btn" data-category="jean">Jean</button>
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Fashion">
+                    Fashion
+                </option>
+
+                <option value="Electronics">
+                    Electronics
+                </option>
+
+                <option value="Accessories">
+                    Accessories
+                </option>
+
+                <option value="Gaming">
+                    Gaming
+                </option>
+
+            </select>
+
+            <!-- SORT -->
+
+            <select id="sortFilter">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low-high">
+                    Price: Low to High
+                </option>
+
+                <option value="high-low">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Highest Rating
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+
     </section>
-    <div id="cartMessage" class="cart-message"></div>
-    
 
-    <section class="product-grid" id="productGrid">
-        <!-- JS will load items here -->
-    </section>
-    
+    <!-- TOAST -->
+    <div id="toastContainer"></div>
 
-    <!-- Cart Panel
-    <div id="cartPanel" class="cart-panel hidden">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button id="closeCart">&times;</button>
-        </div>
-        <ul id="cartItems"></ul>
-        <div class="cart-footer">
-            <p>Total: <span id="cartTotal">$0.00</span></p>
-            <button id="checkoutBtn">Checkout</button>
-        </div>
-    </div> -->
+    <script type="module" src="./js/app.js"></script>
 
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>About Olaitan</h3>
-                <p>Olaitan Store is your trusted source for quality products at affordable prices.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#cart">Cart</a></li>
-                    <li><a href="#account">Account</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Shipping</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Olaitan Store. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="shop.js"></script>
 </body>
 
 </html>
