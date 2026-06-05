@@ -1,102 +1,105 @@
 import {
   renderNavbar
 }
-from "./components/navbar.js";
+  from "./components/navbar.js";
 
 import {
   getCart,
   getCartTotal,
   clearCart
 }
-from "./services/cartService.js";
-
-import {
-  saveOrder
-}
-from "./services/orderService.js";
+  from "./services/cartService.js";
 
 import {
   emailRegex,
   phoneRegex
 }
-from "./validation.js";
+  from "../validation/validation.js";
 
 import {
   showToast
 }
-from "./components/toast.js";
+  from "./components/toast.js";
 
 /* NAVBAR */
 
 renderNavbar();
 
 /* FORM */
-
 const checkoutForm =
- document.getElementById(
-  "checkoutForm"
- );
+  document.getElementById(
+    "checkoutForm"
+  );
 
 /* INPUTS */
 
 const fullName =
- document.getElementById(
-  "fullName"
- );
+  document.getElementById(
+    "fullName"
+  );
 
 const email =
- document.getElementById(
-  "email"
- );
+  document.getElementById(
+    "email"
+  );
 
 const phone =
- document.getElementById(
-  "phone"
- );
+  document.getElementById(
+    "phone"
+  );
 
 const address =
- document.getElementById(
-  "address"
- );
+  document.getElementById(
+    "address"
+  );
 
 /* ERRORS */
 
 const nameError =
- document.getElementById(
-  "nameError"
- );
+  document.getElementById(
+    "nameError"
+  );
 
 const emailError =
- document.getElementById(
-  "emailError"
- );
+  document.getElementById(
+    "emailError"
+  );
 
 const phoneError =
- document.getElementById(
-  "phoneError"
- );
+  document.getElementById(
+    "phoneError"
+  );
 
 const addressError =
- document.getElementById(
-  "addressError"
- );
+  document.getElementById(
+    "addressError"
+  );
 
 /* SUMMARY */
 
 const summaryItems =
- document.getElementById(
-  "summaryItems"
- );
+  document.getElementById(
+    "summaryItems"
+  );
 
 const checkoutTotal =
- document.getElementById(
-  "checkoutTotal"
- );
+  document.getElementById(
+    "checkoutTotal"
+  );
 
 /* GET CART */
 
 const cart =
   getCart();
+  
+
+/* GET CURRENT USER */
+const currentUser =
+  JSON.parse(
+    localStorage.getItem(
+      "currentUser"
+    )
+  );
 
 /* RENDER SUMMARY */
 
@@ -115,10 +118,9 @@ function renderSummary() {
         <strong>
 
           $
-          ${
-            item.price *
-            item.quantity
-          }
+          ${item.price *
+      item.quantity
+      }
 
         </strong>
 
@@ -156,7 +158,7 @@ checkoutForm.addEventListener(
     ) {
 
       nameError.textContent =
-       "Full name required";
+        "Full name required";
 
       isValid = false;
     }
@@ -168,7 +170,7 @@ checkoutForm.addEventListener(
     ) {
 
       emailError.textContent =
-       "Invalid email";
+        "Invalid email";
 
       isValid = false;
     }
@@ -180,7 +182,7 @@ checkoutForm.addEventListener(
     ) {
 
       phoneError.textContent =
-       "Invalid phone number";
+        "Invalid phone number";
 
       isValid = false;
     }
@@ -190,7 +192,7 @@ checkoutForm.addEventListener(
     ) {
 
       addressError.textContent =
-       "Address required";
+        "Address required";
 
       isValid = false;
     }
@@ -202,7 +204,9 @@ checkoutForm.addEventListener(
     const order = {
 
       id: Date.now(),
-
+      
+      userId: currentUser.id,
+      
       customer: {
 
         fullName:
@@ -228,28 +232,19 @@ checkoutForm.addEventListener(
           .toLocaleString()
     };
 
-    /* SAVE */
+    /* SAVE TEMPORARILY */
 
-    saveOrder(order);
+    localStorage.setItem(
 
-    /* CLEAR */
+      "pendingOrder",
 
-    clearCart();
+      JSON.stringify(order)
 
-    /* TOAST */
-
-    showToast(
-      "Order placed successfully",
-      "success"
     );
 
-    /* REDIRECT */
+    /* REDIRECT TO PAYMENT */
 
-    setTimeout(() => {
-
-      window.location.href =
-        "./success.html";
-
-    }, 1500);
+    window.location.href =
+      "./payment.html";
   }
 );

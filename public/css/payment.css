@@ -1,0 +1,76 @@
+.payment-section {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 2rem;
+}
+:root {
+  --primary-color: #7c3aed;
+
+  --text-secondary: #475569;
+}
+
+.payment-card {
+
+  width: 100%;
+
+  max-width: 500px;
+
+  background: white;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+}
+
+.payment-card h2 {
+
+  margin-bottom: 1rem;
+}
+
+.payment-total {
+
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  margin: 1.5rem 0;
+}
+
+.payment-card button {
+
+  width: 100%;
+
+  border: none;
+
+  padding: 1rem;
+
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+  
+   color: white;
+   
+   background-color: var(--primary-color);
+}

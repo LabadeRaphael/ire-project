@@ -28,19 +28,6 @@ export function renderNavbar() {
       ? carts[currentUser.id] || []
       : [];
 
-  /* GET WISHLIST */
-
-  //   const wishlists =
-  //   JSON.parse(
-  //     localStorage.getItem(
-  //       "wishlists"
-  //     )
-  //   ) || {};
-
-  // const wishlist =
-  //   currentUser
-  //     ? wishlists[currentUser.id] || []
-  //     : [];
   const wishlist = getWishlist();
   navbar.innerHTML = `
 
@@ -89,12 +76,6 @@ export function renderNavbar() {
       <!-- ACTIONS -->
 
       <div class="nav-actions">
-
-        <!-- SEARCH -->
-
-        <button class="icon-btn">
-          🔍
-        </button>
 
         <!-- WISHLIST -->
 
@@ -164,6 +145,15 @@ export function renderNavbar() {
               <p>
                 ${currentUser.fullName}
               </p>
+             <a
+              href="./orders.html"
+               class="dropdown-link"
+            >
+
+              Orders
+
+            </a>
+
 
               <button id="logoutBtn">
                 Logout

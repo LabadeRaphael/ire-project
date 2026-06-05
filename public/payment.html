@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Payment
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./css/navbar.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./css/toast.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/payment.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <header id="navbar"></header>
+
+  <section
+    class="payment-section"
+  >
+
+    <div
+      class="payment-card"
+    >
+
+      <h2>
+
+        Complete Payment
+
+      </h2>
+
+      <p>
+
+        Click below to pay
+        securely with Paystack.
+
+      </p>
+
+      <div
+        class="payment-total"
+        id="paymentTotal"
+      ></div>
+
+      <button
+        id="payBtn"
+      >
+
+        Pay Now
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <div
+    id="toastContainer"
+  ></div>
+
+  <script
+    src="https://js.paystack.co/v1/inline.js"
+  ></script>
+
+  <script
+    type="module"
+    src="./js/payment.js"
+  ></script>
+
+</body>
+
+</html>

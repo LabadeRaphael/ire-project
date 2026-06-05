@@ -12,6 +12,17 @@ body {
 
   min-height: 100vh;
 }
+:root {
+  --primary-color: #7c3aed;
+
+  --text-secondary: #475569;
+    
+  --success-color: #22c55e;
+  
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  --radius-md: 14px;
+}
 
 .success-card {
 

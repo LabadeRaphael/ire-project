@@ -179,6 +179,6 @@ export function getCartTotal() {
 export function clearCart() {
 
   localStorage.removeItem(
-    "cart"
+    "carts"
   );
 }
