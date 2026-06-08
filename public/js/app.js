@@ -17,6 +17,22 @@ from "./components/products.js";
 
 renderNavbar();
 
+/* SHOP NAVIGATION */
+
+const shopNowBtn =
+ document.getElementById(
+  "shopNowBtn"
+ );
+
+shopNowBtn?.addEventListener(
+  "click",
+  () => {
+
+    window.location.href =
+      "./shop.html";
+  }
+);
+
 /* FILTER INPUTS */
 
 const searchInput =

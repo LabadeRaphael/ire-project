@@ -17,6 +17,9 @@ import {
 }
 from "./components/toast.js";
 
+/* AUTH */
+requireLogin()
+
 /* NAVBAR */
 
 renderNavbar();

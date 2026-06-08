@@ -5,8 +5,7 @@ import {
 
 import {
   getCart,
-  getCartTotal,
-  clearCart
+  getCartTotal
 }
   from "./services/cartService.js";
 
@@ -15,11 +14,11 @@ import {
   phoneRegex
 }
   from "../validation/validation.js";
+import { requireLogin } from "./services/authService.js";
 
-import {
-  showToast
-}
-  from "./components/toast.js";
+
+/* AUTH */
+requireLogin()
 
 /* NAVBAR */
 

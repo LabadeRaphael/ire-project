@@ -7,6 +7,15 @@ import {
   getOrders
 }
 from "./services/orderService.js";
+import {
+  requireLogin
+}
+from "./services/authService.js";
+
+/* AUTH */
+requireLogin()
+
+/*NAVBAR*/
 
 renderNavbar();
 

@@ -260,4 +260,5 @@ export function renderNavbar() {
         "./login.html";
     }
   );
+  
 }

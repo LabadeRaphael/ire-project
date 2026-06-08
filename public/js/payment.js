@@ -18,6 +18,12 @@ import {
 }
 from "./components/toast.js";
 
+import { requireLogin } from "./services/authService.js";
+
+/* AUTH */
+requireLogin()
+
+/* NAVBAR */
 renderNavbar();
 
 const payBtn =
