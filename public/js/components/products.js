@@ -13,6 +13,7 @@ import {
 }
   from "./modal.js";
 import { renderNavbar } from "./navbar.js";
+import { requireLogin } from "../services/authService.js";
 
 export function renderProducts(
   products
@@ -127,6 +128,12 @@ export function renderProducts(
       "click",
       () => {
           event.stopPropagation();
+          
+          /* LOGIN CHECK */
+
+          if (!requireLogin()) {
+            return;
+          }
         const id =
           Number(
             button.dataset.id
