@@ -28,3 +28,4 @@ const wishlist =
 renderProducts(
   wishlist
 );
+

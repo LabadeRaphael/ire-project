@@ -224,20 +224,26 @@ body {
 
   width: 100%;
 
-  border: none;
+  /* border: none; */
 
   padding: 16px;
 
   border-radius: var(--radius-md);
 
-  background: var(--primary-color);
+  background: var(--primary-color) !important;
 
   color: white;
 
   cursor: pointer;
 
   font-weight: 600;
+  
+  
 }
+a{
+ text-decoration: none;
+}
+
 
 /* EMPTY */
 

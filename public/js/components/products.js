@@ -14,6 +14,7 @@ import {
   from "./modal.js";
 import { renderNavbar } from "./navbar.js";
 import { requireLogin } from "../services/authService.js";
+import { toggleWishlist } from "../services/wishlistsService.js";
 
 export function renderProducts(
   products
@@ -25,6 +26,9 @@ export function renderProducts(
     );
 
   /* EMPTY */
+  const isWishlistPage =
+    window.location.pathname
+      .includes("wishlist.html");
 
   if (products.length === 0) {
 
@@ -91,26 +95,30 @@ export function renderProducts(
           ⭐ ${product.rating}
 
         </div>
+        
+        ${isWishlistPage
+        ? `
+          
+          <h4>$${product.price}</h4>
+           <div class="product-actions">
+            <button class="cart-btn" data-id="${product.id}">
+              Add To Cart
+            </button>
 
+            <button class="wishlist-btn" data-id="${product.id}">
+              ❤️
+            </button>
+          </div>
+          
+        `: `
         <div class="product-footer">
-
-          <h4>
-            $${product.price}
-          </h4>
-
-          <button
-            class="cart-btn"
-            data-id="${product.id}"
-          >
-
-            Add To Cart
-
-          </button>
-
+          <h4>$${product.price}</h4>
+            <button class="cart-btn" data-id="${product.id}">
+              Add To Cart
+            </button>
         </div>
-
-      </div>
-    `;
+        `
+      }`
 
     productsGrid.appendChild(card);
   });
@@ -127,13 +135,13 @@ export function renderProducts(
     button.addEventListener(
       "click",
       () => {
-          event.stopPropagation();
-          
-          /* LOGIN CHECK */
+        event.stopPropagation();
 
-          if (!requireLogin()) {
-            return;
-          }
+        /* LOGIN CHECK */
+
+        if (!requireLogin()) {
+          return;
+        }
         const id =
           Number(
             button.dataset.id
@@ -151,6 +159,55 @@ export function renderProducts(
           "success"
         );
         renderNavbar()
+      }
+    );
+  });
+  const wishlistButtons =
+    document.querySelectorAll(
+      ".wishlist-btn"
+    );
+
+  wishlistButtons.forEach(button => {
+
+    button.addEventListener(
+      "click",
+      (event) => {
+
+        event.stopPropagation();
+
+        const id =
+          Number(
+            button.dataset.id
+          );
+
+        const product =
+          products.find(
+            item => item.id === id
+          );
+
+        const added =
+          toggleWishlist(product);
+
+        showToast(
+          added
+            ? "Added to wishlist"
+            : "Removed from wishlist",
+
+          added
+            ? "success"
+            : "warning"
+        );
+
+        renderNavbar();
+
+        if (!added) {
+
+          renderProducts(
+            products.filter(
+              item => item.id !== id
+            )
+          );
+        }
       }
     );
   });

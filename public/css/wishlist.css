@@ -222,3 +222,47 @@
 
   transform: scale(1.08);
 }
+
+.product-footer{
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* CART BUTTON (main CTA) */
+.cart-btn {
+
+  flex: 1;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: var(--radius-md);
+
+  background: var(--primary-color);
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+
+  transform: translateY(-2px);
+}

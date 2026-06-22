@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Contact Us | DreamWare
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./css/navbar.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./css/contact.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./css/index.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./css/toast.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header id="navbar"></header>
+
+  <!-- HERO -->
+
+  <section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+      <span>
+        We Are Here To Help
+      </span>
+
+      <h1>
+        Contact Us
+      </h1>
+
+      <p>
+        Have questions, suggestions or need
+        assistance? Our team is always ready
+        to support you.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT INFO -->
+
+  <section class="contact-info">
+
+    <div class="info-card">
+
+      <span>📧</span>
+
+      <h3>Email</h3>
+
+      <p>
+        support@neocart.com
+      </p>
+
+    </div>
+
+    <div class="info-card">
+
+      <span>📞</span>
+
+      <h3>Phone</h3>
+
+      <p>
+        +234 800 000 0000
+      </p>
+
+    </div>
+
+    <div class="info-card">
+
+      <span>📍</span>
+
+      <h3>Location</h3>
+
+      <p>
+        Lagos, Nigeria
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT FORM -->
+
+  <section class="contact-section">
+
+    <div class="contact-container">
+
+      <div class="contact-form-wrapper">
+
+        <h2>
+          Send Us A Message
+        </h2>
+
+        <form id="contactForm">
+
+          <div class="input-group">
+
+            <input
+              type="text"
+              id="name"
+              placeholder=" "
+            >
+
+            <label>
+              Full Name
+            </label>
+
+            <small id="nameError"></small>
+
+          </div>
+
+          <div class="input-group">
+
+            <input
+              type="email"
+              id="email"
+              placeholder=" "
+            >
+
+            <label>
+              Email Address
+            </label>
+
+            <small id="emailError"></small>
+
+          </div>
+
+          <div class="input-group">
+
+            <input
+              type="text"
+              id="subject"
+              placeholder=" "
+            >
+
+            <label>
+              Subject
+            </label>
+
+            <small id="subjectError"></small>
+
+          </div>
+
+          <div class="input-group">
+
+            <textarea
+              id="message"
+              placeholder=" "
+            ></textarea>
+
+            <label>
+              Message
+            </label>
+
+            <small id="messageError"></small>
+
+          </div>
+
+          <button class="send-msg" type="submit">
+
+            Send Message
+
+          </button>
+
+        </form>
+
+      </div>
+
+      <div class="contact-side">
+
+        <h2>
+          Business Hours
+        </h2>
+
+        <ul>
+
+          <li>
+            Monday - Friday:
+            8:00 AM - 6:00 PM
+          </li>
+
+          <li>
+            Saturday:
+            9:00 AM - 4:00 PM
+          </li>
+
+          <li>
+            Sunday:
+            Closed
+          </li>
+
+        </ul>
+
+        <div class="support-box">
+
+          <h3>
+            Customer Support
+          </h3>
+
+          <p>
+            Our support team typically
+            responds within 24 hours.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ PREVIEW -->
+
+  <section class="faq-preview">
+
+    <h2>
+      Frequently Asked Questions
+    </h2>
+
+    <div class="faq-grid">
+
+      <div class="faq-card">
+
+        <h3>
+          How long is delivery?
+        </h3>
+
+        <p>
+          Delivery times vary depending
+          on your location.
+        </p>
+
+      </div>
+
+      <div class="faq-card">
+
+        <h3>
+          Can I return products?
+        </h3>
+
+        <p>
+          Yes, products can be returned
+          according to our return policy.
+        </p>
+
+      </div>
+
+      <div class="faq-card">
+
+        <h3>
+          How can I track orders?
+        </h3>
+
+        <p>
+          Orders can be tracked through
+          your account dashboard.
+        </p>
+
+      </div>
+
+    </div>
+    
+    <div id="toastContainer"></div>
+  </section>
+
+
+  <script
+    type="module"
+    src="./js/contact.js"
+  ></script>
+
+</body>
+</html>
